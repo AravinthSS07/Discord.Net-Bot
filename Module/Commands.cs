@@ -122,19 +122,6 @@ namespace Techno_Bot.Module
             }
         }
 
-        [Command("flick")]
-        public async Task Fuck(IGuildUser user = null, [Remainder] string reason = null)
-        {
-            if (user == null)
-            {
-                await ReplyAsync("Please specify a user");
-                return;
-            }
-            if (reason == null) reason = $"{Context.User.Mention} just send you :middle_finger_tone4:";
-
-            await user.SendMessageAsync(reason);
-        }
-
         [Command("bye")]
         public async Task Bye()
         {
